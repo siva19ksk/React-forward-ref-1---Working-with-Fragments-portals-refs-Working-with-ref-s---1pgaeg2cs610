@@ -1,3 +1,4 @@
+// import { set } from 'cypress/types/lodash';
 import React, { useRef, useState } from 'react';
 import InputField from '../pages/components/InputField';
 
@@ -6,10 +7,10 @@ function Home() {
   const [values, setValues] = useState('');
 
   const focusInput = () => {
-
+    newRef.current.focus();
   };
   const settingValue = () => {
-
+    setValues(newRef.current.value);
   };
 
   return (
